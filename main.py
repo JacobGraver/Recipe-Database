@@ -14,6 +14,7 @@ app.title("Recipie Database")
 title = customtkinter.CTkLabel(app, text="List of Recipes")
 title.pack(padx=10, pady=10)
 
+# adding the scrollable frame
 scrollable_frame = customtkinter.CTkScrollableFrame(app, width=400, height=350)
 scrollable_frame.pack(padx=10, pady=10)
 
