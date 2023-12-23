@@ -7,7 +7,7 @@ customtkinter.set_default_color_theme("blue")
 
 # app frame
 app = customtkinter.CTk()
-app.geometry("1280x720")
+app.geometry("1920x1080")
 app.title("Recipie Database")
 
 # Adding UI elements
