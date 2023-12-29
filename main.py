@@ -18,6 +18,4 @@ title.pack(padx=10, pady=10)
 scrollable_frame = customtkinter.CTkScrollableFrame(app, width=400, height=350)
 scrollable_frame.pack(padx=10, pady=10)
 
-test
-
 app.mainloop()
