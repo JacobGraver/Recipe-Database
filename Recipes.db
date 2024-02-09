@@ -1,0 +1,3 @@
+CREATE TABLE Recipes (
+	RecipeID INT PRIMARY 
+)
