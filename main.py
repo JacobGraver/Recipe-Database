@@ -1,29 +1,18 @@
-import sqlite_utils
+import sqlite3
 
-# Create a new database file
-db = sqlite_utils.Database("recipes.db")
+# Connect to the database (creates a new file if it doesn't exist)
+conn = sqlite3.connect('recipes.db')
 
-# Define table schema
-recipes_schema = {
-    "RecipeID": int,
-    "RecipeName": str,
-    "PrepTime": int,
-    "CookTime": int,
-    "Instructions": str,
-}
+# Your table creation SQL statements here
+table_creation_sql = """
+CREATE TABLE Recipes (
+    RecipeID INTEGER PRIMARY KEY,
+    RecipeName TEXT NOT NULL,
+    PrepTime INTEGER,
+    CookTime INTEGER,
+    Instructions TEXT
+);
+-- Create other tables as needed
+"""
 
-ingredients_schema = {
-    "IngredientID": int,
-    "IngredientName": str,
-}
-
-recipe_ingredients_schema = {
-    "RecipeID": int,
-    "IngredientID": int,
-    "Quantity": str,
-}
-
-# Create tables
-db["Recipes"].create_table(recipes_schema)
-db["Ingredients"].create_table(ingredients_schema)
-db["RecipeIngredients"].create_table(recipe_ingredients_schema)
+conn.execute(table_creation_sql)
