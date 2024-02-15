@@ -33,3 +33,5 @@ def cli_prompt():
 
 def add_recipe():
 	recipe_name = input(f"What is the name of the recipe?\n")
+	
+main()
