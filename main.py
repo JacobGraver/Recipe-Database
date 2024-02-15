@@ -25,7 +25,7 @@ def cli_prompt():
 	try:
 		choice = input(f"What would you like to do?\n1. Select a recipe\n2. Add a recipe\n3. Change a recipe\n4. Delete a recipe\n")
 
-		# add the if statements for selections
+		# TODO add the if statements for selections after the functions are made
 
 	except Exception as e:
 		print(f"Error: {e}")
