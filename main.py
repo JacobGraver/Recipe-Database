@@ -16,6 +16,9 @@ CREATE TABLE Recipes (
 -- Create other tables as needed
 """
 
+def main():
+	cli_prompt()
+
 # conn.execute(table_creation_sql)
 
 def cli_prompt():
