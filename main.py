@@ -10,9 +10,23 @@ CREATE TABLE Recipes (
     RecipeName TEXT NOT NULL,
     PrepTime INTEGER,
     CookTime INTEGER,
+    Ingredients TEXT,
     Instructions TEXT
 );
 -- Create other tables as needed
 """
 
-conn.execute(table_creation_sql)
+# conn.execute(table_creation_sql)
+
+def cli_prompt():
+	try:
+		choice = input(f"What would you like to do?\n1. Select a recipe\n2. Add a recipe\n3. Change a recipe\n4. Delete a recipe\n")
+
+		# add the if statements for selections
+
+	except Exception as e:
+		print(f"Error: {e}")
+		
+
+def add_recipe():
+	recipe_name = input(f"What is the name of the recipe?\n")
