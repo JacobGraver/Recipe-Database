@@ -22,8 +22,9 @@ def main():
 # conn.execute(table_creation_sql)
 
 def cli_prompt():
+	# TODO Make a while loop so that this is the main screen and you stay on it until you pick a valid selection
 	try:
-		choice = input(f"What would you like to do?\n1. Select a recipe\n2. Add a recipe\n3. Change a recipe\n4. Delete a recipe\n5. Exit\n")
+		choice = input(f"What would you like to do? (Press Enter when you are done typing)\n1. Select a recipe\n2. Add a recipe\n3. Change a recipe\n4. Delete a recipe\n5. Exit\n")
 
 		# TODO add the if statements for selections after the functions are made
 		if (choice == '1'):
@@ -38,15 +39,16 @@ def cli_prompt():
 		elif(choice == '5'):
 			print("thank for choose 5")
 		else:
-			print("Please enter a valid selection.")
+			print(choice + " is not a valid selection.")
 
-		
-		
 	except Exception as e:
 		print(f"Error: {e}")
 		
 
 def add_recipe():
+	cur = con.cursor()
+
 	recipe_name = input(f"What is the name of the recipe?\n")
+	cur.execute("CREATE TABLE recipe(recipe_name, prep_time, cook_time, ingredients, instructions)")
 	
 main()
