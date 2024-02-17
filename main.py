@@ -54,7 +54,7 @@ def add_recipe():
 
 	# Get the prep time and put it into the table 
 	prep_time = input(f"How long does the recipe take to prep?\n")
-	conn.execute("INSERT INTO * (PrepTime)", recipe_name)
+    conn.execute("INSERT INTO * (PrepTime) VALUES(*)", recipe_name, prep_time)
 
-	
 main()
+
