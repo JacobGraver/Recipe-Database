@@ -50,7 +50,7 @@ def add_recipe():
 	# Get the name of the recipe and create a table that is named after the recipe and has the recipe name in the table
 	recipe_name = input(f"What is the name of the recipe?\n")
 	conn.execute("CREATE TABLE *(RecipeName, PrepTime, CookTime, Ingredients, Instructions)", recipe_name)
-	conn.execute("INSERT INTO *(RecipeName) VALUES('recipe_name')")
+	conn.execute("INSERT INTO *(RecipeName) VALUES(recipe_name)")
 
 	# Get the prep time and put it into the table 
 	prep_time = input(f"How long does the recipe take to prep?\n")
