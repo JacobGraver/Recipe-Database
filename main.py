@@ -28,7 +28,6 @@ def cli_prompt():
 
 		# TODO add the if statements for selections after the functions are made
 		if (choice == '1'):
-			# TODO make the select recipe function
 			print("thank for choose 1")
 		elif(choice == '2'):
 			print("thank for choose 2")
