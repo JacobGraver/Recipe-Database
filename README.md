@@ -7,3 +7,5 @@ First thing I am going to do is figure out how I am going to store the recipie i
 I created the data structure that I am going to go with.
 
 I am going to start out making it as a command line application. Then later will make it into a full gui app.
+
+I have made the add recipe function now but I have not tested it just yet. It *should work but I want to test it with my wife.
