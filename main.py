@@ -62,7 +62,24 @@ def add_recipe():
 	while choice != 'no':
 		choice = ' '
 		choice = input(f"Would you like to add another ingredient? ('yes' or 'no')\n")
-		conn.execute("INSERT INTO * (Ingredients) VALUES(*)", recipe_name, choice)
+
+		ingredient = input(f"What is the ingredient?\n")
+		conn.execute("INSERT INTO * (Ingredients) VALUES(*)", recipe_name, ingredient)
+
+	# Adding the instructions to the db 
+	# Each step will be in its own cell in the column so that is how they will be displayed
+	step_1 = input(f"What is the first step?\n")
+	conn.execute("INSERT INTO * (Instructions) VALUES (*)", recipe_name, step_1)
+
+	# Reseting the value for choice so it cant cause issues
+	choice = ' '
+
+	# Decision loop for the steps of the recipe 
+	while choice != 'no':
+		choice = ' '
+		choice = input(f"Would you like to add another step?('yes' or 'no')\n")
+
+
 
 main()
 
