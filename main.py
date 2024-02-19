@@ -90,7 +90,7 @@ def add_recipe():
 	#################################################################
 
 	# Adding the instructions to the db 
-	# Each step will be in its own cell in the column so that is how they will be displayed
+	# Each step (*should) be in its own cell in the column so that is how they will be displayed
 	step_1 = input(f"What is the first step?\n")
 	conn.execute("INSERT INTO * (Instructions) VALUES (*)", recipe_name, step_1)
 
