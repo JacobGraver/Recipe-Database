@@ -60,7 +60,9 @@ def add_recipe():
 
 	# Decision loop for adding more ingredients
 	while choice != 'no':
-		print(f"Would you like to add another ingredient?\n")
+		choice = ' '
+		choice = input(f"Would you like to add another ingredient? ('yes' or 'no')\n")
+		conn.execute("INSERT INTO * (Ingredients) VALUES(*)", recipe_name, choice)
 
 main()
 
