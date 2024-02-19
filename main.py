@@ -30,7 +30,8 @@ def cli_prompt():
 		if (choice == '1'):
 			print("thank for choose 1")
 		elif(choice == '2'):
-			print("thank for choose 2")
+			# print("thank for choose 2")
+			add_recipe()
 		elif(choice == '3'):
 			print("thank for choose 3")
 		elif(choice == '4'):
