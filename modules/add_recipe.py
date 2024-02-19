@@ -40,9 +40,10 @@ def add_recipe():
 	# Decision loop for adding more ingredients
     while True:
         choice = input(f"Would you like to add another ingredient? ('yes' or 'no')\n")
-        if choice == 'no'
+        if choice == 'no':
         	break
-        if choice == 'yes'
+        	
+        if choice == 'yes':
     		ingredient = input(f"What is the ingredient?\n")
         	conn.execute("INSERT INTO * (Ingredients) VALUES(*)", recipe_name, ingredient)
 
@@ -61,9 +62,10 @@ def add_recipe():
 	# Decision loop for the steps of the recipe 
 	while True:
 		choice = input(f"Would you like to add another step?('yes' or 'no')\n")
-		if choice == 'no'
+		if choice == 'no':
 			break
-		if choice == 'yes'
+
+		if choice == 'yes':
 			next_step = input(f"What is the next step?\n")
 			conn.execute("INSERT INTO * (Instructions) VALUES (*)", recipe_name, next_step)
 
