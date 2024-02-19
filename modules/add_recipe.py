@@ -42,9 +42,13 @@ def add_recipe():
         choice = input(f"Would you like to add another ingredient? ('yes' or 'no')\n")
         if choice == 'no':
         	break
-        if choice == 'yes':
-    	ingredient = input(f"What is the ingredient?\n")
-        	conn.execute("INSERT INTO * (Ingredients) VALUES(*)", recipe_name, ingredient)
+
+        elif choice == 'yes':
+            ingredient = input(f"What is the ingredient?\n")
+            conn.execute("INSERT INTO * (Ingredients) VALUES(*)", recipe_name, ingredient)
+			
+        else:
+            print(f"Please enter a valid selection\n")
 
 	#################################################################
 	######################### Instructions ##########################
@@ -52,21 +56,24 @@ def add_recipe():
 
 	# Adding the instructions to the db 
 	# Each step (*should) be in its own cell in the column so that is how they will be displayed
-	step_1 = input(f"What is the first step?\n")
-	conn.execute("INSERT INTO * (Instructions) VALUES (*)", recipe_name, step_1)
+    step_1 = input(f"What is the first step?\n")
+    conn.execute("INSERT INTO * (Instructions) VALUES (*)", recipe_name, step_1)
 
 	# Reseting the value for choice so it cant cause issues
-	choice = ' '
+    choice = ' '
 
 	# Decision loop for the steps of the recipe 
-	while True:
-		choice = input(f"Would you like to add another step?('yes' or 'no')\n")
-		if choice == 'no':
-			break
+    while True:
+        choice = input(f"Would you like to add another step?('yes' or 'no')\n")
+        if choice == 'no':
+            break
 
-		if choice == 'yes':
-			next_step = input(f"What is the next step?\n")
-			conn.execute("INSERT INTO * (Instructions) VALUES (*)", recipe_name, next_step)
+        elif choice == 'yes':
+            next_step = input(f"What is the next step?\n")
+            conn.execute("INSERT INTO * (Instructions) VALUES (*)", recipe_name, next_step)
+        
+        else:
+            print(f"Please enter a valid selection\n")
 
 
 add_recipe()
