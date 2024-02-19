@@ -27,19 +27,21 @@ def cli_prompt():
 		choice = input(f"What would you like to do? (Press Enter when you are done typing)\n1. Select a recipe\n2. Add a recipe\n3. Change a recipe\n4. Delete a recipe\n5. Exit\n")
 
 		# TODO add the if statements for selections after the functions are made
-		if (choice == '1'):
-			print("thank for choose 1")
-		elif(choice == '2'):
-			# print("thank for choose 2")
-			add_recipe()
-		elif(choice == '3'):
-			print("thank for choose 3")
-		elif(choice == '4'):
-			print("thank for choose 4")
-		elif(choice == '5'):
-			print("thank for choose 5")
-		else:
-			print(choice + " is not a valid selection.")
+		while True:
+			if (choice == '1'):
+				print("thank for choose 1")
+			elif(choice == '2'):
+				# print("thank for choose 2")
+				add_recipe()
+			elif(choice == '3'):
+				print("thank for choose 3")
+			elif(choice == '4'):
+				print("thank for choose 4")
+			elif(choice == '5'):
+				print("Thank you for using my program")
+				break
+			else:
+				print(choice + " is not a valid selection.")
 
 	except Exception as e:
 		print(f"Error: {e}")
