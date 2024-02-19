@@ -54,6 +54,13 @@ def add_recipe():
 	# Get the prep time and put it into the table 
 	prep_time = input(f"How long does the recipe take to prep?\n")
 	conn.execute("INSERT INTO * (PrepTime) VALUES(*)", recipe_name, prep_time)
+	
+	ingredients = input(f"What is the first ingredient?\n")
+	conn.execute("INSERT INTO * (Ingredients) VALUES(*)", recipe_name, ingredients)
+
+	# Decision loop for adding more ingredients
+	while choice != 'no':
+		print(f"Would you like to add another ingredient?\n")
 
 main()
 
