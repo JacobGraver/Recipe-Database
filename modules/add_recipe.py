@@ -42,9 +42,9 @@ def add_recipe():
         choice = input(f"Would you like to add another ingredient? ('yes' or 'no')\n")
         if choice == 'no'
         	break
-
-    	ingredient = input(f"What is the ingredient?\n")
-        conn.execute("INSERT INTO * (Ingredients) VALUES(*)", recipe_name, ingredient)
+        if choice == 'yes'
+    		ingredient = input(f"What is the ingredient?\n")
+        	conn.execute("INSERT INTO * (Ingredients) VALUES(*)", recipe_name, ingredient)
 
 	#################################################################
 	######################### Instructions ##########################
@@ -63,9 +63,9 @@ def add_recipe():
 		choice = input(f"Would you like to add another step?('yes' or 'no')\n")
 		if choice == 'no'
 			break
-
-		next_step = input(f"What is the next step?\n")
-		conn.execute("INSERT INTO * (Instructions) VALUES (*)", recipe_name, next_step)
+		if choice == 'yes'
+			next_step = input(f"What is the next step?\n")
+			conn.execute("INSERT INTO * (Instructions) VALUES (*)", recipe_name, next_step)
 
 
 add_recipe()
