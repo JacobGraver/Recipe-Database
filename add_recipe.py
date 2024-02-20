@@ -12,8 +12,8 @@ def add_recipe():
     
     recipe_name = input(f"What is the name of the recipe?\n")
     
-    conn.execute("CREATE TABLE *(RecipeName, PrepTime, CookTime, Ingredients, Instructions)", recipe_name)
-    conn.execute("INSERT INTO *(RecipeName) VALUES(recipe_name)")
+    conn.execute("CREATE TABLE * (RecipeName, PrepTime, CookTime, Ingredients, Instructions)", recipe_name)
+    conn.execute("INSERT INTO * (RecipeName) VALUES(recipe_name)", recipe_name)
 
     #################################################################
     ########################## Prep Time ############################
@@ -74,6 +74,3 @@ def add_recipe():
         
         else:
             print(f"Please enter a valid selection\n")
-
-
-add_recipe()

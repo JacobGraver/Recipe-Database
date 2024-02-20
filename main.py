@@ -1,6 +1,6 @@
 import sqlite3
 
-from modules import	add_recipe
+from add_recipe import	add_recipe
 
 # Connect to the database (creates a new file if it doesn't exist)
 conn = sqlite3.connect('recipes.db')
@@ -44,6 +44,7 @@ def cli_prompt():
 				break
 			else:
 				print(choice + " is not a valid selection.")
+				break
 
 	except Exception as e:
 		print(f"Error: {e}")
