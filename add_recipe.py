@@ -59,7 +59,7 @@ def add_recipe():
     step_1 = input(f"What is the first step?\n")
     conn.execute("INSERT INTO * (Instructions) VALUES (*)", recipe_name, step_1)
 
-    # Reseting the value for choice so it cant cause issues
+    # Reseting the value for choice so it can't cause issues
     choice = ' '
 
     # Decision loop for the steps of the recipe 
