@@ -9,3 +9,5 @@ I created the data structure that I am going to go with.
 I am going to start out making it as a command line application. Then later will make it into a full gui app.
 
 I have made the add recipe function now but I have not tested it just yet. It *should work but I want to test it with my wife.
+
+Testing has gone well other than I still need to figure out how to use multiple variables in an SQL statement.
