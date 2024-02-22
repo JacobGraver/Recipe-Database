@@ -24,11 +24,10 @@ def main():
 # conn.execute(table_creation_sql)
 
 def cli_prompt():
-	# TODO Make a while loop so that this is the main screen and you stay on it until you pick a valid selection
+
 	try:
 		choice = input(f"What would you like to do? (Press Enter when you are done typing)\n1. Select a recipe\n2. Add a recipe\n3. Change a recipe\n4. Delete a recipe\n5. Exit\n")
 
-		# TODO add the if statements for selections after the functions are made
 		while True:
 			if (choice == '1'):
 				print("thank for choose 1")
