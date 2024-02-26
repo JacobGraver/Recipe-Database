@@ -31,9 +31,12 @@ def cli_prompt():
 		while True:
 			if (choice == '1'):
 				print("thank for choose 1")
+				break
 			elif(choice == '2'):
 				# print("thank for choose 2")
 				add_recipe()
+				cli_prompt()
+				break
 			elif(choice == '3'):
 				print("thank for choose 3")
 			elif(choice == '4'):
