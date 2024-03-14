@@ -21,6 +21,7 @@ CREATE TABLE Recipes (
 def main():
 	cli_prompt()
 
+# Magit test
 # conn.execute(table_creation_sql)
 
 def cli_prompt():
