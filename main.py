@@ -10,7 +10,7 @@ def cmd_prompt():
 
     if choice == '1':
         # TODO write add_recipe function
-        print('Yay 1 works')
+        add_recipe()
 
     elif choice == '2':
         # TODO write view_all_recipes function
@@ -50,6 +50,20 @@ def add_recipe():
         "Steps": recipe_steps
         
     }
+    # Writes the file to a json string
+    json_str = json.dumps(recipe)
+    
+    # Saves the string to a file
+    # It worked the first time but I think the name wont ever change so I need to figure out how to iterate over it
+    with open('something.json', 'w') as f:
+        f.write(json_str)
+        
+    # # Reads the json file back into python as a dict again
+    # with open('something.json', 'r') as f:
+    #     loaded_dict = json.load(f)
+    
+    # test
+    # print(loaded_dict)
     
     # TODO make the steps that take the dictionary and parse it and save it as a json file
     # I dont think that I am going to have to parse it because it is very simple to take the info as is
