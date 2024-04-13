@@ -1,10 +1,9 @@
 class RecipeDatabase():
-    
-
+	
     def main(self):
         cmd_prompt()
 
-    def cmd_prompt():
+    def cmd_prompt(self):
         choice = input(print(f'What would you like to do?\n(1) Add a new recipe.\n(2)'))
 
         if choice == '1':
@@ -13,9 +12,7 @@ class RecipeDatabase():
 
         elif choice == '2':
         	# TODO write 
+         print('Yay 2 works')
+         
 
-        else:
-            print('Please make a valid selection.')
-            cmd_prompt()
-
-main()
+    main(self)
