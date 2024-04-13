@@ -1,56 +1,21 @@
-import sqlite3
+class RecipeDatabase():
+    
 
-from add_recipe import	add_recipe
+    def main(self):
+        cmd_prompt()
 
-# Connect to the database (creates a new file if it doesn't exist)
-conn = sqlite3.connect('recipes.db')
+    def cmd_prompt():
+        choice = input(print(f'What would you like to do?\n(1) Add a new recipe.\n(2)'))
 
-# Your table creation SQL statements here
-table_creation_sql = """
-CREATE TABLE Recipes (
-    RecipeID INTEGER PRIMARY KEY,
-    RecipeName TEXT NOT NULL,
-    PrepTime INTEGER,
-    CookTime INTEGER,
-    Ingredients TEXT,
-    Instructions TEXT
-);
--- Create other tables as needed
-"""
+        if choice == '1':
+            # TODO write add_recipe function
+            print('Yay 1 works')
 
-def main():
-	cli_prompt()
+        elif choice == '2':
+        	# TODO write 
 
-# conn.execute(table_creation_sql)
-
-def cli_prompt():
-
-	try:
-		choice = input(f"What would you like to do? (Press Enter when you are done typing)\n1. Select a recipe\n2. Add a recipe\n3. Change a recipe\n4. Delete a recipe\n5. Exit\n")
-
-		while True:
-			if (choice == '1'):
-				print("thank for choose 1")
-				break
-			elif(choice == '2'):
-				# print("thank for choose 2")
-				add_recipe()
-				cli_prompt()
-				break
-			elif(choice == '3'):
-				print("thank for choose 3")
-			elif(choice == '4'):
-				print("thank for choose 4")
-			elif(choice == '5'):
-				print("Thank you for using my program")
-				break
-			else:
-				print(choice + " is not a valid selection.")
-				break
-
-	except Exception as e:
-		print(f"Error: {e}")
-		
+        else:
+            print('Please make a valid selection.')
+            cmd_prompt()
 
 main()
-
