@@ -14,7 +14,6 @@ def cmd_prompt():
         add_recipe.add_recipe()
 
     elif choice == '2':
-        # TODO write view_all_recipes function
         view_all.view_all_recipes()
         
     elif choice == '3':
