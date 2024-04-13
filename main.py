@@ -1,5 +1,6 @@
 import add_recipe
 import view_all
+import search
 
 
 def main():
@@ -17,15 +18,16 @@ def cmd_prompt():
         view_all.view_all_recipes()
         
     elif choice == '3':
-        # TODO write search_recipe function
-        print('Yay 3 works')
+        search.search_recipe()
 
     elif choice == '4':
         # TODO write update_recipe function
+        # This one could get annoying with figuring out how to let them actively edit (document style) so you dont have to re-type the entire steps
         print('Yay 4 works')
         
     elif choice == '5':
         # TODO write delete_recipe function
+        # This one should be super easy and just an os module
         print('Yay 5 works')
         
     else:
