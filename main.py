@@ -1,4 +1,5 @@
 import json
+import os
 
 
 def main():
@@ -50,12 +51,27 @@ def add_recipe():
         "Steps": recipe_steps
         
     }
+    
+    file_name = str(recipe['Recipe name']) + '.json'
     # Writes the file to a json string
     json_str = json.dumps(recipe)
     
+    # Directory for storing recipes
+    directory = 'Recipes'
+
+    # Ensure the directory exists, create it if it doesn't
+    if not os.path.exists(directory):
+        os.makedirs(directory)
+    
+    # Construct the full path including directory and file name
+    file_path = os.path.join(directory, file_name)
+
+    # Serialize dictionary to JSON string
+    json_str = json.dumps(my_dict)
+    
     # Saves the string to a file
     # It worked the first time but I think the name wont ever change so I need to figure out how to iterate over it
-    with open('something.json', 'w') as f:
+    with open(file_path, 'w') as f:
         f.write(json_str)
         
     # # Reads the json file back into python as a dict again
