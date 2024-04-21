@@ -8,7 +8,6 @@ def update_recipe():
         print("What is the name of the recipe that you would like to update? ")
     )
 
-<<<<<<< HEAD
     directory = "Recipe-Database/Recipes"
     file_name = name + ".json"
 
@@ -27,16 +26,10 @@ def update_recipe():
 
         # Making the change
         name[part] = change
-=======
-    file_name = name + ".json"
-
-    # TODO write search function
->>>>>>> origin/main
 
     # getting the key for the dict
     recipe = input(print("What part of the recipe would you like to update?"))
 
-<<<<<<< HEAD
     with open(file_name, "r") as f:
         loaded_dict = json.load(f)
 
@@ -51,7 +44,4 @@ def update_recipe():
 
     # load the json string into a file
     with open(file_name, "w") as f:
-=======
-    with open(file_name) as f:
->>>>>>> origin/main
         loaded_dict = json.load(f)
