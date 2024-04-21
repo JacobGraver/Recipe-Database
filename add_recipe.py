@@ -11,18 +11,17 @@ def add_recipe():
     recipe_steps = input(print('What are the steps to make the recipe? (Please just use seperate sentences for the steps and no need to number them) '))
     
     # Create the dictionary that all of the inputs are going into
-    recipe = {
+    recipe_temp = {
         "Recipe name": recipe_name,
         "Prep time": prep_time,
         "Cook time": cook_time,
         "Ingredients": ingredients,
         "Steps": recipe_steps
-        
     }
     
-    file_name = str(recipe['Recipe name']) + '.json'
+    file_name = str(recipe_temp['Recipe name']) + '.json'
     # Writes the file to a json string
-    json_str = json.dumps(recipe)
+    json_str = json.dumps(recipe_temp)
     
     # Directory for storing recipes
     directory = 'Recipes'

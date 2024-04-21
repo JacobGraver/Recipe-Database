@@ -8,26 +8,40 @@ def update_recipe():
         print("What is the name of the recipe that you would like to update? ")
     )
 
+    directory = "Recipe-Database/Recipes"
     file_name = name + ".json"
 
     # TODO write search function
+    if file_name in directory:
+        with open(file_name, "r") as f:
+            loaded_dict = json.load(f)
+
+        print(loaded_dict[name])
+
+        # choosing which part of the recipe to update
+        part = input(print("What part of the recipe would you like to update? "))
+
+        # getting the change
+        change = input(print("Please type the changed verion now"))
+
+        # Making the change
+        name[part] = change
 
     # getting the key for the dict
     recipe = input(print("What part of the recipe would you like to update?"))
 
-    with open(file_name, 'r') as f:
+    with open(file_name, "r") as f:
         loaded_dict = json.load(f)
 
-    to_change = input(print('What part of the recipe would you like to change?'))
-    
-    change = input(print('Please type the changed verion now'))
-    
+    to_change = input(print("What part of the recipe would you like to change?"))
+
+    change = input(print("Please type the changed verion now"))
+
     loaded_dict[to_change] = change
 
     # load the changed dict into a json string
     json_str = json.dumps(loaded_dict)
-    
-    # load the json string into a file 
-    with open(file_name, 'w') as f:
-        loaded_dict = json.load(f)
 
+    # load the json string into a file
+    with open(file_name, "w") as f:
+        loaded_dict = json.load(f)
