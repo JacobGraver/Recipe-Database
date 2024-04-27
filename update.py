@@ -3,6 +3,8 @@ import os
 
 
 def update_recipe():
+    import main
+
     # Get the name of the recipe to be updated
     name = input(
         print("What is the name of the recipe that you would like to update? ")
@@ -11,7 +13,6 @@ def update_recipe():
     directory = "Recipe-Database/Recipes"
     file_name = name + ".json"
 
-    # TODO write search function
     if file_name in directory:
         with open(file_name, "r") as f:
             loaded_dict = json.load(f)
@@ -45,3 +46,5 @@ def update_recipe():
     # load the json string into a file
     with open(file_name, "w") as f:
         loaded_dict = json.load(f)
+
+    main.cmd_prompt()
