@@ -37,9 +37,10 @@ def add_recipe():
     file_path = os.path.join(directory, file_name)
 
     # Serialize dictionary to JSON string
-    json_str = json.dumps(recipe)
+    json_str = json.dumps(file_name)
 
     # Saves the string to a file
-    # It worked the first time but I think the name wont ever change so I need to figure out how to iterate over it
+    # It worked the first time but I think the name wont ever change so I need
+    # to figure out how to iterate over it
     with open(file_path, 'w') as f:
         f.write(json_str)

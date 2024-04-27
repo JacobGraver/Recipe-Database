@@ -26,7 +26,7 @@ def cmd_prompt():
 
     elif choice == "4":
         # TODO write update_recipe function
-        print("Yay 4 works")
+        update.update_recipe()
 
     elif choice == "5":
         # TODO write delete_recipe function
