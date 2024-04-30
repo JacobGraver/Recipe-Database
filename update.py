@@ -9,9 +9,11 @@ def update_recipe():
         print("What is the name of the recipe that you would like to update? ")
     )
 
+    # File details
     directory = "Recipe-Database/Recipes"
     file_name = name + ".json"
 
+    # If the file is in the folder then read it into a dictionary
     if file_name in directory:
         with open(file_name, "r") as f:
             loaded_dict = json.load(f)
@@ -23,20 +25,10 @@ def update_recipe():
             print("What part of the recipe would you like to update? "))
 
         # getting the change
-        change = input(print("Please type the changed verion now"))
+        change = input(print("Please type the changed verion now: "))
 
         # Making the change
         loaded_dict[part] = change
-
-    with open(file_name, "r") as f:
-        loaded_dict = json.load(f)
-
-    to_change = input(
-        print("What part of the recipe would you like to change?"))
-
-    change = input(print("Please type the changed verion now"))
-
-    loaded_dict[to_change] = change
 
     # load the json string into a file
     with open(file_name, "w") as f:
