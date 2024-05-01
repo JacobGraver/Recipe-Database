@@ -9,12 +9,15 @@ def main():
 
 
 def cmd_prompt():
-    choice = input(
-        print(
-            f"What would you like to do?\n(1) Add a new recipe?\n(2) View all recipes?\n(3) Search for a recipe?\n(4) Update a recipe?\n(5) Delete a recipe?"
-        )
+    choice = (
+        input(
+            print("""
+        What would you like to do?\n(1) Add a new recipe?\n(2) View all
+        recipes?\n(3) Search for a recipe?\n(4) Update a recipe?\n
+        (5) Delete a recipe?
+        """)
+        ),
     )
-
     if choice == "1":
         add_recipe.add_recipe()
 
