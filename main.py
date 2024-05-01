@@ -9,14 +9,14 @@ def main():
 
 
 def cmd_prompt():
-    choice = (
-        input(
-            print("""
-        What would you like to do?\n(1) Add a new recipe?\n(2) View all
-        recipes?\n(3) Search for a recipe?\n(4) Update a recipe?\n
-        (5) Delete a recipe?
-        """)
-        ),
+    choice = input(
+        print(
+            """
+            What would you like to do?\n(1) Add a new recipe?\n
+            (2) View all recipes?\n(3)
+            Search for a recipe?\n(4) Update a recipe?\n(5) Delete a recipe?
+            """
+        )
     )
     if choice == "1":
         add_recipe.add_recipe()
@@ -28,11 +28,10 @@ def cmd_prompt():
         search.search_recipe()
 
     elif choice == "4":
-        # TODO write update_recipe function
         update.update_recipe()
 
     elif choice == "5":
-        # TODO write delete_recipe function
+        # TODO write delete_reipe function
         # This one should be super easy and just an os module
         print("Yay 5 works")
 

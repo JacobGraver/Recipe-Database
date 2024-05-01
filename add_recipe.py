@@ -9,14 +9,19 @@ def add_recipe():
     cook_time = input(print("What is the cook time for the recipe? "))
     ingredients = input(
         print(
-            """What are the ingredients?
-        (Please just put a comma between the ingredients) """
+            """
+            What are the ingredients?
+            (Please just put a comma between the ingredients)
+            """
         )
     )
     recipe_steps = input(
         print(
-            """What are the steps to make the recipe? (Please just use seperate
-        sentences for the steps and no need to number them) """
+            """
+            What are the steps to make the recipe?
+            (Please just use seperate sentences for the
+            steps and no need to number them)
+            """
         )
     )
 

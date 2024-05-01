@@ -21,8 +21,12 @@ def update_recipe():
         print(loaded_dict[name])
 
         # choosing which part of the recipe to update
+        # Formatting is odd because the line is too long otherwise
         part = input(
-            print("What part of the recipe would you like to update? "))
+            print("""
+        What part of the recipe would you like to update?
+        """)
+        )
 
         # getting the change
         change = input(print("Please type the changed verion now: "))
