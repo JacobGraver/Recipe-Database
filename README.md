@@ -18,4 +18,6 @@ I am not going to do the sql database right now since it really is not needed fo
 
 I am using primarily dictionaries because they are super fast and memory efficient
 
-I am saving all of the information in json files. It is very easy and works really well
+I am saving all of the information in json files. It is very easy and works really well after I actually write it correctly.
+
+It is almost at a point to where we can start using it. I do want to get the search feature figured out because it is key.
