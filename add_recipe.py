@@ -11,7 +11,7 @@ def add_recipe():
         print(
             """
             What are the ingredients?
-            (Please just put a comma between the ingredients)
+            (Please just put a comma and a space between the ingredients)
             """
         )
     )
@@ -34,7 +34,7 @@ def add_recipe():
         "Steps": recipe_steps,
     }
 
-    file_name = str(recipe_temp["Recipe name"]) + ".json"
+    file_name = str(recipe_name + ".json")
     # Writes the file to a json string
     json_str = json.dumps(recipe_temp)
 
@@ -49,7 +49,8 @@ def add_recipe():
     file_path = os.path.join(directory, file_name)
 
     # Serialize dictionary to JSON string
-    json_str = json.dumps(file_name)
+    # Fixed I think
+    json_str = json.dumps(recipe_temp)
 
     # Saves the string to a file
     # It worked the first time but I think the name wont ever change so I need

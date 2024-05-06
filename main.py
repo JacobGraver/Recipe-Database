@@ -12,10 +12,13 @@ def cmd_prompt():
     choice = input(
         print(
             """
-            What would you like to do?\n(1) Add a new recipe?\n
-            (2) View all recipes?\n(3)
-            Search for a recipe?\n(4) Update a recipe?\n(5) Delete a recipe?
-            """
+What would you like to do?
+(1) Add a new recipe?
+(2) View all recipes?
+(3) Search for a recipe?
+(4) Update a recipe?
+(5) Delete a recipe?
+"""
         )
     )
     if choice == "1":
