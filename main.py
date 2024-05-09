@@ -28,6 +28,7 @@ What would you like to do?
         view_all.view_all_recipes()
 
     elif choice == "3":
+        # FIXME does not work
         search.search_recipe()
 
     elif choice == "4":
