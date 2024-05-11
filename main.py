@@ -28,7 +28,7 @@ What would you like to do?
         view_all.view_all_recipes()
 
     elif choice == "3":
-        # FIXME does not work
+        # I believe that I fixed this function
         search.search_recipe()
 
     elif choice == "4":
