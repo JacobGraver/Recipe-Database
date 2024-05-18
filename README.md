@@ -21,3 +21,5 @@ I am using primarily dictionaries because they are super fast and memory efficie
 I am saving all of the information in json files. It is very easy and works really well after I actually write it correctly.
 
 It is almost at a point to where we can start using it. I do want to get the search feature figured out because it is key.
+
+The only thing that I am currently not sure if it works is the search function. I have everything else working well.
