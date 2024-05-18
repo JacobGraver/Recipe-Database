@@ -1,12 +1,14 @@
-import os
 import json
 
 
 def search_recipe():
     import main
 
-    name = input(print("What is the name of the recipe that you are looking for? "))
-    path = "Recipe-Database/Recipes"
+    name = input(
+        print("What is the name of the recipe that you are looking for? "))
+    directory = "Recipe-Database/Recipes"
+
+    file_name = name + ".json"
 
     if file_name in directory:
         with open(file_name, "r") as f:
