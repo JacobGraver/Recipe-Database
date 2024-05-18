@@ -14,9 +14,11 @@ def search_recipe():
         with open(file_name, "r") as f:
             loaded_dict = json.load(f)
 
-        print(loaded_dict[name])
-
-    main.cmd_prompt()
+        print(loaded_dict)
+        main.cmd_prompt()
+    else:
+        print("Recipe is not in the database.")
+        search_recipe()
 
 
 # First I am going to have to search for the file
